@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>App Engine Demo</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+  <body>
+  
+  <script src="https://cdn.cai.tools.sap/webchat/webchat.js"
+channelId="a8feabc2-514b-4ca6-8456-b9b389ddaeb6"
+token="be4fbc7094961c1adefabcd4f0884aea"
+id="cai-webchat"
+></script>
+    <div id="result">Loading...</div>
+
+    <script>
+$(document).ready(function() {
+  $.getJSON('/demo', function(data) {
+    $('#result').html("Hello, " + data.name);
+  });
+});
+    </script>
+  </body>
+</html>
