@@ -1,24 +1,40 @@
 <!doctype html>
 <html>
-  <head>
-    <title>App Engine Demo</title>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  </head>
-  <body>
-  
-  <script src="https://cdn.cai.tools.sap/webchat/webchat.js"
-channelId="a8feabc2-514b-4ca6-8456-b9b389ddaeb6"
-token="be4fbc7094961c1adefabcd4f0884aea"
-id="cai-webchat"
-></script>
-    <div id="result">Loading...</div>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chit-Chat Bot</title>
+<script
+	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<style>
+body, html {
+	height: 100%;
+	margin: 0;
+}
 
-    <script>
-$(document).ready(function() {
-  $.getJSON('/demo', function(data) {
-    $('#result').html("Hello, " + data.name);
-  });
-});
-    </script>
-  </body>
+.bg {
+opacity: 0.5;
+  filter: alpha(opacity=50);
+	/* The image used */
+	background-image:
+		url("https://cdn.cai.tools.sap/man/recast-ai-youpi-01.svg");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</style>
+</head>
+<body>
+<div>
+<h1><b>Click on the bottom right corner button and start conversation with the
+			bot.</b></h1></div>
+<div class="bg"></div>
+
+	<script src="https://cdn.cai.tools.sap/webchat/webchat.js"
+		channelId="a8feabc2-514b-4ca6-8456-b9b389ddaeb6"
+		token="be4fbc7094961c1adefabcd4f0884aea" id="cai-webchat"></script>
+
+</body>
 </html>
